@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~6.0.0"
+  },
+  "fitbit": {
+    "appUUID": "3a900aff-10f5-486c-ad91-f88e679e36ce",
+    "appType": "clockface",
+    "appDisplayName": "Random activity",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#03a9f4",
+    "requestedPermissions": [
+      "access_location"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "Random activity"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}

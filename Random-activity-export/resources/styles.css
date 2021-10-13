@@ -1,0 +1,24 @@
+.background {
+  viewport-fill: lightblue;
+}
+
+#myLabel {
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 65%;
+  y: 30%;
+  fill: white;
+}
+
+#myLocation{
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 65%;
+  y: 30%;
+  fill: white;
+}
+

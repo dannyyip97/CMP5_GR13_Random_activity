@@ -1,5 +1,5 @@
 .background {
-  viewport-fill: lightblue;
+  viewport-fill: pink;
 }
 
 #myLabel {
@@ -21,4 +21,3 @@
   y: 30%;
   fill: white;
 }
-

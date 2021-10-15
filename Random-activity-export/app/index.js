@@ -26,3 +26,4 @@ clock.ontick = (evt) => {
 }
 
 //djsfjhksdjfk
+// giel was hier

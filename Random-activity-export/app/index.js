@@ -25,7 +25,4 @@ clock.ontick = (evt) => {
   myLabel.text = `${hours}:${mins}`;
 }
 
-
-
-
-
+//djsfjhksdjfk

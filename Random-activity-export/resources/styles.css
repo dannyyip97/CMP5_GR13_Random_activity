@@ -1,5 +1,5 @@
 .background {
-  viewport-fill: yellow;
+  viewport-fill: black;
 }
 
 #myLabel {
@@ -10,6 +10,7 @@
   x: 65%;
   y: 30%;
   fill: white;
+  border: 1pt solid white;
 }
 
 #myLocation{

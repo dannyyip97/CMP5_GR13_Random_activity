@@ -1,5 +1,5 @@
 .background {
-  viewport-fill: blue;
+  viewport-fill: black;
 
 }
 
@@ -9,8 +9,8 @@
   text-length: 100;
   text-anchor: middle;
   x: 50%;
-  y: 50%;
-  fill: white;
+  y: 58%;
+  fill:white;
 
 }
 

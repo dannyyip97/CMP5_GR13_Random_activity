@@ -4,12 +4,12 @@
 }
 
 #myLabel {
-  font-size: 80;
+  font-size: 25;
   font-family: System-Bold;
   text-length: 100;
   text-anchor: middle;
-  x: 50%;
-  y: 58%;
+  x: 79%;
+  y: 32%;
   fill:white;
 
 }

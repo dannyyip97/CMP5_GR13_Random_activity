@@ -34,10 +34,13 @@
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install front/.husky"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "volta": {
+    "node": "14.18.2"
   }
 }

@@ -67,3 +67,5 @@ setStateCallback(draw);
 
 // draw when code loaded
 draw();
+
+//getWeatherData(options?: { temperatureUnit?: celcius; } | undefined);

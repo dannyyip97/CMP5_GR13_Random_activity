@@ -24,7 +24,8 @@ arc-width="5" start-angle="90" sweep-angle="360" />
       font-family="System-Regular" fill="white"
       font-size="30" font-weight="bold"
       text-anchor="middle">activiteit</text>
-<image x="240" y="205" width="50" height="50" href="icons/dots.png" fill="limegreen" />
+
+
 
   <text id="time" fill="#FFFFFF" x="79%" y="32%" font-size="25" font-family="System-Regular" text-anchor="middle" text-length="6"/>
   <text id="letter" fill="#FF0000" x="50%" y="90%" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="12"/>
@@ -32,3 +33,4 @@ arc-width="5" start-angle="90" sweep-angle="360" />
   <text id="steps" fill="#FF0000" x="50%" y="50" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="12"/>
   <text id="calories" fill="#FF0000" x="50%" y="70" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="12"/>
 </svg>
+<svg><image x="240" y="205" width="50" height="50" href="icons/dots.png" fill="limegreen" /></svg>

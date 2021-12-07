@@ -1,6 +1,8 @@
 import * as cbor from 'cbor';
 import { outbox } from 'file-transfer';
 import { settingsStorage } from 'settings';
+import { geolocation } from "geolocation";
+import {apiKey} from './keys';
 
 /* Settings */
 function sendSettings() {
@@ -17,7 +19,43 @@ function sendSettings() {
     .catch((error) => console.log(`send error: ${error}`));
 }
 
-settingsStorage.addEventListener('change', sendSettings);
+//mapbox
+
+geolocation.getCurrentPosition(locationSuccess, locationError, {
+  timeout: 60 * 1000
+});
+
+async function locationSuccess(position) {
+  console.log(position.coords);
+  const url =`https://api.mapbox.com/geocoding/v5/mapbox.places/${position.coords.longitude},${position.coords.latitude}.json?access_token=${apikey}`;
+
+
+  const response = await fetch(url);
+  const json = await response.json();
+
+let location ='';
+json.features.forEach((feature) => {
+  if (
+    !location &&
+    ( feature.place_type[0] === 'locality' ||
+      feature.place_type[0] === 'place')
+  ) {
+    location = feature.text;
+  }
+});
+
+outbox
+  .enqueue('location.cbor', cbor.encode({ location }))
+  .then(() => console.log(location + 'location sent'))
+  .catch((error) => console.log(`send error: ${error}`));
+}
+
+
+function locationError(error) {
+  console.log("Error: " + error.code, "Message: " + error.message);
+}
+
+/*settingsStorage.addEventListener('change', sendSettings);
 if (companion.permissions.granted("access_location")) {
    weather
      .getWeatherData()
@@ -33,4 +71,4 @@ if (companion.permissions.granted("access_location")) {
      .catch((ex) => {
        console.error(ex);
      });
-}
+}*/

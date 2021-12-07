@@ -11,14 +11,40 @@ initState();
 
 // elements
 const $letter = document.getElementById('letter');
+const $location = document.getElementById('location');
 const $time = document.getElementById('time');
 const $hr = document.getElementById('hr');
 const $steps = document.getElementById('steps');
 const $calories = document.getElementById('calories');
+const $dots = document.getElementById('dots');
+
+//const $antwoorden = ["Ja", "Neen", "Ja zeker", "Alles kan nog","Jammer maar helaas", "Euhm wil je het echt weten", "Wat een grap"];
+//const $activiteit = document.getElementById("activiteit");
+//const $knop = document.querySelector(".Submit");
 
 // define vars for later use;
 let time = '';
 let hr = '--';
+
+//click event
+$dots.onclick = () => {
+
+}
+//activiteiten
+//$activiteit.appendChild($antwoorden);
+
+//function willekeurigGetal(min, max) {
+//  min = Math.ceil(min);
+//  max = Math.floor(max);
+//  return Math.floor(Math.random() * (max - min + 1)) + min;
+//}
+
+//function answer(){
+//  if ($knop.onclick = () => {
+//    document.getElementById("activiteit").innerHTML = //$antwoorden[willekeurigGetal(0,6)];
+//  }
+//}
+//$knop.addEventListener("click",answer);
 
 // get heart rate
 if (HeartRateSensor) {
@@ -32,6 +58,7 @@ if (HeartRateSensor) {
 // draw
 function draw() {
   $time.text = time;
+  $location.text = getStateItem('location');
   $letter.text = getStateItem('letter');
   $hr.text = hr;
   $steps.text = today.adjusted.steps;
@@ -67,5 +94,3 @@ setStateCallback(draw);
 
 // draw when code loaded
 draw();
-
-//getWeatherData(options?: { temperatureUnit?: celcius; } | undefined);

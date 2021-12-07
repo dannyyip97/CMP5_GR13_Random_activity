@@ -3,6 +3,7 @@ import * as filesystem from 'fs';
 
 const state = {
   letter: '',
+  location: '',
   // add other state-items here
 };
 
@@ -55,6 +56,17 @@ function processFiles() {
       Object.keys(state).forEach((key) => {
         if (typeof data[key] !== 'undefined') state[key] = data[key];
       });
+
+      updateState();
+      if (callback) callback();
+    }
+    if (fileName === 'location.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      state.location = data.location;
+
+      console.log(state.location);
+      console.log(state);
 
       updateState();
       if (callback) callback();

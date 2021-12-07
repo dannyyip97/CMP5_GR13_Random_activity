@@ -30,6 +30,9 @@ arc-width="5" start-angle="90" sweep-angle="360" />
 
   <text id="time" fill="#FFFFFF" x="79%" y="32%" font-size="25" font-family="System-Regular" text-anchor="middle" text-length="6"/>
   <text id="letter" fill="#FF0000" x="50%" y="90%" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="12"/>
+
+  <text id="location" fill="#FF0000" x="50%" y="90%" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="12"/>
+
   <text id="hr" fill="#FF0000" x="50%" y="30" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="12"/>
   <text id="steps" fill="#FF0000" x="50%" y="50" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="12"/>
   <text id="calories" fill="#FF0000" x="50%" y="70" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="12"/>

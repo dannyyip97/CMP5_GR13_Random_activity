@@ -3,13 +3,18 @@ import { outbox } from 'file-transfer';
 import { settingsStorage } from 'settings';
 import { geolocation } from "geolocation";
 import {apiKey} from './keys';
-
+import {me as companion } from "companion";
+import weather from "weather";
 /* Settings */
 function sendSettings() {
+  console.log(settingsStorage.getItem('letter'));
+  console.log(settingsStorage.getItem('toggle'));
   const settings = {
+
     letter: settingsStorage.getItem('letter')
       ? JSON.parse(settingsStorage.getItem('letter')).values[0].value
       : '',
+      Toggle: settingsStorage.getItem('letter') ? JSON.parse(settingsStorage.getItem('toggle')) : false,
     // add other settings here
   };
 
@@ -55,7 +60,8 @@ function locationError(error) {
   console.log("Error: " + error.code, "Message: " + error.message);
 }
 
-/*settingsStorage.addEventListener('change', sendSettings);
+settingsStorage.addEventListener('change', sendSettings);
+
 if (companion.permissions.granted("access_location")) {
    weather
      .getWeatherData()
@@ -71,4 +77,4 @@ if (companion.permissions.granted("access_location")) {
      .catch((ex) => {
        console.error(ex);
      });
-}*/
+}

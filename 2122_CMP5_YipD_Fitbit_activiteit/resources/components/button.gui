@@ -1,0 +1,29 @@
+<defs>
+  <symbol id="button" height="70">
+    <rect fill="blue" x="0" y="0" width="100%" height="100%" rx="50%" ry="50%" />
+    <rect fill="black" x="0" y="0" width="98%" height="99%" rx="50%" ry="50%"/>
+    <text id="text" fill="white" x="50%" y="50%" font-size="32" font-family="System-Regular" text-anchor="middle" text-buffer="continue" />
+
+    <rect id="handle" fill="black" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="visible"/>
+  </symbol>
+
+  <symbol id="activiteit" height="70">
+    <rect fill="blue" x="-90" y="-99" width="180%" height="180%" rx="100%" ry="100%" />
+    <rect fill="orange" x="-90" y="-99" width="180%" height="180%" rx="100%" ry="100%"/>
+    <text id="text" fill="white" x="0" y="0" font-size="32" font-family="System-Regular" text-anchor="middle" text-buffer="continue" />
+    <rect id="handle" fill="black" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="visible"/>
+  </symbol>
+
+  <symbol id="logo" height="70">
+    <rect fill="blue" x="0" y="0" width="100%" height="100%" rx="50%" ry="50%" />
+    <rect fill="black" x="0" y="0" width="98%" height="99%" rx="50%" ry="50%"/>
+    <image x="24" y="23" width="50" height="50" href="icons/icon.png" />
+    <rect id="handle" fill="black" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="visible"/>
+  </symbol>
+  <symbol id="list" height="70">
+    <rect fill="blue" x="0" y="0" width="100%" height="100%" rx="50%" ry="50%" />
+    <rect fill="black" x="0" y="0" width="98%" height="99%" rx="50%" ry="50%"/>
+    <image x="25" y="25" width="50" height="50" href="icons/dots.png" fill="limegreen" />
+    <rect id="handle" fill="black" x="0" y="0" width="100%" height="100%" opacity="0" pointer-events="visible"/>
+  </symbol>
+</defs>

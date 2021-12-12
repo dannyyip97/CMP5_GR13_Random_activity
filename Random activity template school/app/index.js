@@ -12,6 +12,7 @@ initState();
 // elements
 const $letter = document.getElementById('letter');
 const $location = document.getElementById('location');
+const $weather = document.getElementById('weather');
 const $time = document.getElementById('time');
 const $hr = document.getElementById('hr');
 const $steps = document.getElementById('steps');
@@ -31,20 +32,19 @@ $dots.onclick = () => {
 
 }
 //activiteiten
-//$activiteit.appendChild($antwoorden);
+/*$activiteit.appendChild($antwoorden)
+function willekeurigGetal(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-//function willekeurigGetal(min, max) {
-//  min = Math.ceil(min);
-//  max = Math.floor(max);
-//  return Math.floor(Math.random() * (max - min + 1)) + min;
-//}
-
-//function answer(){
-//  if ($knop.onclick = () => {
-//    document.getElementById("activiteit").innerHTML = //$antwoorden[willekeurigGetal(0,6)];
-//  }
-//}
-//$knop.addEventListener("click",answer);
+function answer(){
+  if ($knop.onclick = () => {
+    document.getElementById("activiteit").innerHTML = //$antwoorden[willekeurigGetal(0,6)];
+  }
+}
+$knop.addEventListener("click",answer);*/
 
 // get heart rate
 if (HeartRateSensor) {
@@ -59,10 +59,18 @@ if (HeartRateSensor) {
 function draw() {
   $time.text = time;
   $location.text = getStateItem('location');
+  $weather.text = getStateItem('weather');
   $letter.text = getStateItem('letter');
   $hr.text = hr;
   $steps.text = today.adjusted.steps;
   $calories.text = today.adjusted.calories;
+
+  if(getStateItem('toggle')){
+    $location.style.display = 'inline';
+  } else {
+    $location.style.display = 'none';
+  }
+
 }
 
 // time

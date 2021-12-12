@@ -83,6 +83,16 @@ function processFiles() {
 
       updateState();
       callback();
+
+  } else if (fileName === 'weather.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
     }
   }
 }

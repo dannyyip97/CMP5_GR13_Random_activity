@@ -1,9 +1,13 @@
 import { inbox } from 'file-transfer';
 import * as filesystem from 'fs';
+import {weekGoals, week} from "user-activity";
+
 
 const state = {
   letter: '',
+  weather:'',
   location: '',
+  toggle:false,
   // add other state-items here
 };
 
@@ -57,6 +61,8 @@ function processFiles() {
         if (typeof data[key] !== 'undefined') state[key] = data[key];
       });
 
+      console.log(state);
+
       updateState();
       if (callback) callback();
     }
@@ -66,7 +72,18 @@ function processFiles() {
       state.location = data.location;
 
       console.log(state.location);
-      console.log(state);
+      console.log(JSON.stringify(state));
+
+      updateState();
+      if (callback) callback();
+    }
+    if (fileName === 'weather.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      state.weather = data.weather;
+
+      console.log(state.weather);
+      console.log(JSON.stringify(state));
 
       updateState();
       if (callback) callback();

@@ -60,6 +60,7 @@ export function destroy() {
 
 export function init() {
   console.log('init detail page');
+
   $locationName = document.getElementById('location');
   $button = document.getElementById('back-button');
   $button.onclick = () => {
@@ -67,12 +68,13 @@ export function init() {
     document.history.back();
     switchPage('index');
   };
-  myList = document.getElemenetById('myList');
+  myList = document.getElementById('myList');
+  console.log('test');
   getListData();
   doSomething();
   getLocationName();
   setStateCallback('index', draw);
   setStateCallback('replace', draw);
   setStateCallback('detail', draw);
-  // draw();
+  draw();
 }

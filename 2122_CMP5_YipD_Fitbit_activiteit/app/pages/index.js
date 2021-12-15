@@ -5,6 +5,8 @@ import clock from 'clock';
 import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
 
+clock.granularity = 'seconds';
+
 //import { init as getStateItem } from '../state';
 
 /*const $antwoorden = [
@@ -65,8 +67,9 @@ export function init() {
 }
 
 function draw() {
-  if (($time, $weather)) {
-    $weather.text = getStateItem('weather');
+  if ($time && $weather) {
+    console.log(getStateItem('weatherTemp'));
+    $weather.text = getStateItem('weatherTemp');
     $time.text = time;
   }
 }

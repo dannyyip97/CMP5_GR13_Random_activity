@@ -7,7 +7,7 @@ const state = {
   listData: [],
   listItem: null,
   list: [],
-  weather: '',
+  weatherTemp: '',
   letter: '',
   companionTimestamp: 0,
   location: '',
@@ -87,6 +87,8 @@ function processFiles() {
       callback();
     } else if (fileName === 'weather.cbor') {
       const data = filesystem.readFileSync(fileName, 'cbor');
+
+      console.log('weather reveiced');
 
       Object.keys(state).forEach((key) => {
         if (typeof data[key] !== 'undefined') state[key] = data[key];

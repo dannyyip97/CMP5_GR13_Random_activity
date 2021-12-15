@@ -4,28 +4,9 @@ import { settingsStorage } from 'settings';
 import * as messaging from 'messaging';
 import { geolocation } from 'geolocation';
 import { API_KEY } from './keys';
-
+import { data } from './data';
 import { me as companion } from 'companion';
 import weather from 'weather';
-
-settingsStorage.addEventListener('change', sendSettings);
-//weather
-if (companion.permissions.granted('access_location')) {
-  weather
-    .getWeatherData()
-    .then((data) => {
-      if (data.locations.length > 0) {
-        const temp = Math.floor(data.locations[0].currentWeather.temperature);
-        const cond = data.locations[0].currentWeather.weatherCondition;
-        const loc = data.locations[0].name;
-        const unit = data.temperatureUnit;
-        console.log(`It's ${temp}\u00B0 ${unit} and ${cond} in ${loc}`);
-      }
-    })
-    .catch((ex) => {
-      console.error(ex);
-    });
-}
 
 /* Settings */
 function sendSettings() {
@@ -96,6 +77,36 @@ async function fetchLocationName(coords) {
     .catch((error) => console.log(`send error: ${error}`));
 }
 
+//send data
+async function getListData() {
+  const listData = data.map((item) => {
+    return {
+      name: item.name,
+      id: item.id,
+    };
+  });
+
+  console.log(listData);
+  outbox
+    .enqueue('listData.cbor', cbor.encode({ listData }))
+    .then(() => console.log('listData sent'))
+    .catch((error) => console.log(`send error: ${error}`));
+}
+
+async function getListItem(id) {
+  const listItem = data.find((item) => {
+    return id === item.id;
+  });
+  console.log(listItem);
+  outbox
+    .enqueue('listItem.cbor', cbor.encode({ listItem }))
+    .then(() => console.log('listItem sent'))
+    .catch((error) => console.log(`send error: ${error}`));
+}
+
+getListItem('zomer');
+getListData();
+
 /* Location functions */
 function locationSuccess(location) {
   fetchLocationName(location.coords);
@@ -110,6 +121,13 @@ function locationError(error) {
 function processMessaging(evt) {
   console.log(evt.data);
   switch (evt.data.command) {
+    case 'getListItem':
+      getListItem(evt.data.id);
+      break;
+    case 'getListData':
+      getListData();
+      break;
+
     case 'location':
       geolocation.getCurrentPosition(locationSuccess, locationError);
       break;
@@ -120,3 +138,21 @@ function processMessaging(evt) {
 }
 
 messaging.peerSocket.addEventListener('message', processMessaging);
+
+//weather
+if (companion.permissions.granted('access_location')) {
+  weather.getWeatherData().then((data) => {
+    if (data.locations.length > 0) {
+      const temp = Math.floor(data.locations[0].currentWeather.temperature);
+      const cond = data.locations[0].currentWeather.weatherCondition;
+      const loc = data.locations[0].name;
+      const unit = data.temperatureUnit;
+      console.log(`It's ${temp}\u00B0 ${unit} and ${cond} in ${loc}`);
+    }
+  });
+
+  outbox
+    .enqueue('weather.cbor', cbor.encode(weather))
+    .then(() => console.log('weather sent'))
+    .catch((error) => console.log(`send error: ${error}`));
+}

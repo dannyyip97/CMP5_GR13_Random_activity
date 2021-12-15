@@ -41,7 +41,7 @@ arc-width="5" start-angle="90" sweep-angle="360" />
   <text id="time" fill="#FFFFFF" x="79%" y="32%" font-size="25" font-family="System-Regular" text-anchor="middle" text-length="6"/>
 
 
-<text id="weather" fill="green" x="21%" y="73%" font-size="30" font-family="System-Regular" text-anchor="middle" text-length="30"/>
+<text id="weather" fill="#E6E261" x="21%" y="73%" font-size="30" font-family="System-Regular" text-anchor="middle" text-length="30"/>
 
 <text id="activiteit" fill="yellow" x="79%" y="32%" font-size="10" font-family="System-Regular" text-anchor="middle" text-length="6"/>
 

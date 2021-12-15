@@ -148,11 +148,11 @@ if (companion.permissions.granted('access_location')) {
       const loc = data.locations[0].name;
       const unit = data.temperatureUnit;
       console.log(`It's ${temp}\u00B0 ${unit} and ${cond} in ${loc}`);
+
+      outbox
+        .enqueue('weather.cbor', cbor.encode({ weatherTemp: temp }))
+        .then(() => console.log('weather sent'))
+        .catch((error) => console.log(`send error: ${error}`));
     }
   });
-
-  outbox
-    .enqueue('weather.cbor', cbor.encode(weather))
-    .then(() => console.log('weather sent'))
-    .catch((error) => console.log(`send error: ${error}`));
 }

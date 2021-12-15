@@ -4,6 +4,8 @@ import * as messaging from 'messaging';
 
 const state = {
   items: [],
+  listData: [],
+  listItem: null,
   list: [],
   weather: '',
   letter: '',
@@ -83,8 +85,25 @@ function processFiles() {
 
       updateState();
       callback();
+    } else if (fileName === 'weather.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
 
-  } else if (fileName === 'weather.cbor') {
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
+    } else if (fileName === 'listData.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
+    } else if (fileName === 'listItem.cbor') {
       const data = filesystem.readFileSync(fileName, 'cbor');
 
       Object.keys(state).forEach((key) => {

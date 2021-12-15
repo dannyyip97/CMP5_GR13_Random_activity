@@ -20,6 +20,7 @@ export function getListItem(id) {
 }
 // get data
 export function getListData() {
+  console.log('get list data');
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     messaging.peerSocket.send({
       command: 'getListData',

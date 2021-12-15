@@ -1,7 +1,6 @@
 import document from 'document';
 import { switchPage } from '../navigation';
 import { getStateItem, setStateCallback, removeStateCallback } from '../state';
-
 let $button = null;
 let $letter = null;
 let $timestamp = null;
@@ -13,7 +12,6 @@ function doSomething() {
 function draw() {
   const letter = getStateItem('letter');
   const timestamp = getStateItem('companionTimestamp');
-
   $timestamp.text = timestamp;
 
   if (letter) {
@@ -28,7 +26,9 @@ export function destroy() {
   $button = null;
   $letter = null;
   $timestamp = null;
+
   removeStateCallback('replace');
+  removeStateCallback('index', draw);
 }
 
 export function init() {

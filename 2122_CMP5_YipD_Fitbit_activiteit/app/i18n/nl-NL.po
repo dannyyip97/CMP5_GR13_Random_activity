@@ -5,7 +5,7 @@ msgid "Terug"
 msgstr "Terug"
 
 msgid "activiteit"
-msgstr "activiteit"
+msgstr "Activiteit"
 
 msgid "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."
 

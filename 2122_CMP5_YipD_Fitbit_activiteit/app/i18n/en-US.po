@@ -1,0 +1,12 @@
+msgid "Over FitBored"
+msgstr "About FitBored"
+
+msgid "Terug"
+msgstr "Back"
+
+msgid "activiteit"
+msgstr "activitiy"
+
+msgid "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."
+
+msgstr "A fun alternative to stop boredom. It generates fun activities adapted to your weather conditions. So that you always have something to do both alone and with your friends."

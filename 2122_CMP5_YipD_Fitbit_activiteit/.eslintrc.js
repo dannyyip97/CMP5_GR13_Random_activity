@@ -45,6 +45,7 @@ module.exports = {
       'power',
       'device',
       'peer',
+      'i18n',
     ],
   },
 };

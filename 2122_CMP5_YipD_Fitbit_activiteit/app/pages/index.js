@@ -24,10 +24,8 @@ let $buttonDetail = null;
 let $buttonReplace = null;
 let time = '';
 let $time = null;
-
 let $weather = null;
-
-/*let $activiteit = '';*/
+let $activiteit = null;
 
 function doSomething() {
   console.log('hallo index');
@@ -40,6 +38,7 @@ export function destroy() {
   $buttonReplace = null;
   $time = null;
   $weather = null;
+  $activiteit = null;
 }
 
 export function init() {
@@ -48,7 +47,7 @@ export function init() {
   $buttonReplace = document.getElementById('replace-button');
   $time = document.getElementById('time');
   $weather = document.getElementById('weather');
-  /*$activiteit = document.getElementById('activiteit');*/
+  $activiteit = document.getElementById('activiteit');
 
   /*$activiteit = document.getElementById('activiteit');*/
 
@@ -68,9 +67,10 @@ export function init() {
 }
 
 function draw() {
-  if ($time && $weather) {
+  if ($time && $weather && $activiteit) {
     $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
+    $activiteit.text = getStateItem('name');
   }
 }
 

@@ -5,6 +5,7 @@ import clock from 'clock';
 import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
 import { gettext } from 'i18n';
+import { getListData } from '../commands';
 clock.granularity = 'seconds';
 
 //import { init as getStateItem } from '../state';
@@ -105,6 +106,7 @@ function updateTime(datetime) {
   time = `${hours}:${mins}`;
 
   // draw every second to show time changes
+  getListData();
   draw();
 }
 

@@ -2,7 +2,7 @@ import { gettext } from 'i18n';
 
 export const data = [
   {
-    name: 'Plan a vacation you have always wanted to take',
+    name: gettext('Plan a vacation you have always wanted to take'),
     value: 'Test-1',
     user: 'Danny-1',
     id: 'zomer',

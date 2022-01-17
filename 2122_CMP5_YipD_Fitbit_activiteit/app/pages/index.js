@@ -71,7 +71,8 @@ function draw() {
   if ($time && $weather && $activiteit) {
     $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
-    $activiteit.text = getStateItem('name');
+    $activiteit.text = getStateItem('listData');
+    console.log($activiteit);
   }
 }
 

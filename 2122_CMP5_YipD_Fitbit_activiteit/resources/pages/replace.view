@@ -1,8 +1,7 @@
 <svg viewport-fill="#000000">
-  <textarea fill="#FF00FF" x="18" y="3" width="300" height="110" font-size="36" font-family="System-Regular" text-anchor="middle" text-buffer="Replaced!" />
-  <text id="letter" fill="white" x="50%" y="100" width="300" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="20" />
-  <text id="timestamp" fill="white" x="50%" y="150" width="300" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="20" />
+  <textarea fill="#D5E035" x="18" y="3" width="300" height="110" font-size="36" font-family="System-Regular" text-anchor="middle" text-buffer="_Over FitBored" />
+  <textarea fill="white" x="18" y="50" width="300" height="200" font-size="20" font-family="System-Regular" text-anchor="middle" text-buffer="_Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."/>
   <use href="#button" fill="#FF00FF" x="10%" y="100%-90" width="80%">
-    <set href="text" attributeName="text-buffer" to="Back" />
+    <set href="text" attributeName="text-buffer" to="_Terug" />
     <set href="handle" attributeName="id" to="back-button" />
 </svg>

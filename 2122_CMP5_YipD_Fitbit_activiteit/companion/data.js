@@ -92,7 +92,7 @@ export const data = [
     id: 'herfst',
   },
   {
-    name: gettext('Play some card games '),
+    name: gettext('Play some card games'),
     value: 'Test-16',
     user: 'Danny-16',
     id: 'winter',

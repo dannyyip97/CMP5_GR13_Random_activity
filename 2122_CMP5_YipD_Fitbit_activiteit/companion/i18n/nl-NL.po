@@ -12,3 +12,6 @@ msgstr "maak een spontane road trip met je vrienden"
 
 msgid "Have a picnic with some friends"
 msgstr "Ga picknicken met wat vrienden"
+
+msgid "Create your personal website"
+msgstr "maak je eigen website"

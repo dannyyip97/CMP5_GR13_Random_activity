@@ -7,6 +7,7 @@ import { API_KEY } from './keys';
 import { data } from './data';
 import { me as companion } from 'companion';
 import weather from 'weather';
+import { gettext } from 'i18n';
 
 /* Settings */
 function sendSettings() {
@@ -85,8 +86,9 @@ async function getListData() {
       id: item.id,
     };
   });
-
   console.log(listData);
+  console.log(gettext('hello'));
+
   outbox
     .enqueue('listData.cbor', cbor.encode({ listData }))
     .then(() => console.log('listData sent'))

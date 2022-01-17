@@ -1,0 +1,12 @@
+msgid "Over FitBored"
+msgstr "Over Fitbored"
+
+msgid "Terug"
+msgstr "Terug"
+
+msgid "activiteit"
+msgstr "activiteit"
+
+msgid "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."
+
+msgstr "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."

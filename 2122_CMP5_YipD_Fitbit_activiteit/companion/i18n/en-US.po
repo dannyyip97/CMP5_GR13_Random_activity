@@ -12,3 +12,48 @@ msgstr "Take a spontaneous road trip with some friends"
 
 msgid "Have a picnic with some friends"
 msgstr "Have a picnic with some friends"
+
+msgid "Create your personal website"
+msgstr "Create your personal website"
+
+msgid "Repaint a room in your house"
+msgstr "Repaint a room in your house"
+
+msgid "Bake pastries for/with you and your partner"
+msgstr "Bake pastries for/with you and your partner"
+
+msgid "Take a hike at a local park"
+msgstr "Take a hike at a local park"
+
+msgid "Go on a fishing trip with some friends"
+msgstr "Go on a fishing trip with some friendss"
+
+msgid "Watch a movie you would never usually watch"
+msgstr "Watch a movie you would never usually watch"
+
+msgid "Start reading a book"
+msgstr "Start reading a book"
+
+msgid "Pull a harmless prank on one of your friends"
+msgstr "Pull a harmless prank on one of your friends"
+
+msgid "Take an online cooking class"
+msgstr "Take an online cooking class"
+
+msgid "Play some card games"
+msgstr "Play some card games"
+
+msgid "Run 5km in your local park"
+msgstr "Run 5km in your local park"
+
+msgid "Draw one of your favorite disney characters"
+msgstr "Draw one of your favorite disney characters"
+
+msgid "Learn something new on Youtube"
+msgstr "Learn something new on Youtube"
+
+msgid "Take nice pictures with some friends and post it"
+msgstr "Take nice pictures with some friends and post it"
+
+msgid "Make a sandcastle"
+msgstr "Make a sandcastle"

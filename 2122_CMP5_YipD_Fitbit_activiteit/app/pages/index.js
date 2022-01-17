@@ -4,7 +4,7 @@ import zeroPad from '../utils/zero-pad';
 import clock from 'clock';
 import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
-
+import { gettext } from 'i18n';
 clock.granularity = 'seconds';
 
 //import { init as getStateItem } from '../state';
@@ -31,6 +31,7 @@ let $weather = null;
 
 function doSomething() {
   console.log('hallo index');
+  console.log(gettext('welcome'));
 }
 
 export function destroy() {
@@ -68,8 +69,7 @@ export function init() {
 
 function draw() {
   if ($time && $weather) {
-    console.log(getStateItem('weatherTemp'));
-    $weather.text = getStateItem('weatherTemp');
+    $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
   }
 }

@@ -24,11 +24,18 @@
       <use id="my-pool[12]" href="#my-item" />
       <use id="my-pool[13]" href="#my-item" />
       <use id="my-pool[14]" href="#my-item" />
+      <use id="my-pool[15]" href="#my-item" />
+      <use id="my-pool[16]" href="#my-item" />
+      <use id="my-pool[17]" href="#my-item" />
+      <use id="my-pool[19]" href="#my-item" />
+      <use id="my-pool[20]" href="#my-item" />
+      <use id="my-pool[21]" href="#my-item" />
+      <use id="my-pool[22]" href="#my-item" />
     </use>
   </use>
 
   <use href="#button" fill="#00FFFF" x="10%" y="100%-90" width="80%">
-    <set href="text" attributeName="text-buffer" to="Back" />
+    <set href="text" attributeName="text-buffer" to="_Terug" />
     <set href="handle" attributeName="id" to="back-button" />
   </use>
 

@@ -38,7 +38,7 @@ msgid "Start reading a book"
 msgstr "Start met het lezen van een boek"
 
 msgid "Pull a harmless prank on one of your friends"
-msgstr "Haal een onschuldige prank uit op een van je vrienden "
+msgstr "Haal een onschuldige prank uit op een van je vrienden"
 
 msgid "Take an online cooking class"
 msgstr "Volg een online kookles"
@@ -59,4 +59,4 @@ msgid "Take nice pictures with some friends and post it"
 msgstr "Neem mooie foto's met vrienden en post ze"
 
 msgid "Make a sandcastle"
-msgstr "Maak een zandkasteel "
+msgstr "Maak een zandkasteel"

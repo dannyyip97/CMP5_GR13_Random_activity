@@ -1,0 +1,14 @@
+msgid "Plan a vacation you have always wanted to take"
+msgstr "Plan een vakantie die je altijd had willen doen"
+
+msgid "Hold a video game tournament with some friends"
+msgstr "Hou een videogame wedstrijd met wat vrienden"
+
+msgid "Teach your dog a new trick"
+msgstr "Leer uw hond een nieuwe trucjes"
+
+msgid "Take a spontaneous road trip with some friends"
+msgstr "maak een spontane road trip met je vrienden"
+
+msgid "Have a picnic with some friends"
+msgstr "Ga picknicken met wat vrienden"

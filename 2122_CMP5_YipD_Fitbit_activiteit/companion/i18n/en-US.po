@@ -1,0 +1,14 @@
+msgid "Plan a vacation you have always wanted to take"
+msgstr "Plan a vacation you have always wanted to take"
+
+msgid "Hold a video game tournament with some friends"
+msgstr "Hold a video game tournament with some friends"
+
+msgid "Teach your dog a new trick"
+msgstr "Teach your dog a new trick"
+
+msgid "Take a spontaneous road trip with some friends"
+msgstr "Take a spontaneous road trip with some friends"
+
+msgid "Have a picnic with some friends"
+msgstr "Have a picnic with some friends"

@@ -222,7 +222,6 @@ function renderMainPage(props) {
             props.settingsStorage.setItem('itemName', '');
             props.settingsStorage.setItem('itemLetter', '');
             props.settingsStorage.setItem('itemColor', '');
-
             // set itemAdding so we can switch views
             props.settingsStorage.setItem('itemAdding', 'true');
 

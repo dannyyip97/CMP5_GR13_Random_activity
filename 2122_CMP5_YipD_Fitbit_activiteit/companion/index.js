@@ -143,18 +143,19 @@ messaging.peerSocket.addEventListener('message', processMessaging);
 
 //weather
 if (companion.permissions.granted('access_location')) {
-  weather
-    .getWeatherData()
-    .then((data) => {
-      if (data.locations.length > 0) {
-        const temp = Math.floor(data.locations[0].currentWeather.temperature);
-        const cond = data.locations[0].currentWeather.weatherCondition;
-        const loc = data.locations[0].name;
-        const unit = data.temperatureUnit;
-        console.log(`It's ${temp}\u00B0 ${unit} and ${cond} in ${loc}`);
-      }
-    })
-    .catch((ex) => {
-      console.error(ex);
-    });
+  weather.getWeatherData().then((data) => {
+    if (data.locations.length > 0) {
+      const temp = Math.floor(data.locations[0].currentWeather.temperature);
+      const cond = data.locations[0].currentWeather.weatherCondition;
+      const loc = data.locations[0].name;
+      const unit = data.temperatureUnit;
+
+      console.log(`It's ${temp}\u00B0 ${unit} and ${cond} in ${loc}`);
+
+      outbox
+        .enqueue('weather.cbor', cbor.encode({ weatherTemp: temp }))
+        .then(() => console.log('weather sent'))
+        .catch((error) => console.log(`send error: ${error}`));
+    }
+  });
 }

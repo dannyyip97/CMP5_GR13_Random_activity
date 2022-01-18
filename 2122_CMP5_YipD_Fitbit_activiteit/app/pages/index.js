@@ -70,20 +70,7 @@ export function init() {
   // use the function on start as well
   updateTime(new Date());
 }
-/*var datatest = getStateItem('listData').map(function () {
-return this.attr("name");
-});
-var someactivity = '';*/
 
-/*function getListOfName(){
-  var listData = getStateItem('listData');
-  let names = [];
-  listData[1].map(listData => {
-    listData[1].map(({name}) => {if(name) names.push(name)})
-  })
-  return names;
-}
-console.log("Full list of names", getListOfName());*/
 
 
 function draw() {

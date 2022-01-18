@@ -5,7 +5,7 @@ import clock from 'clock';
 import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
 import { gettext } from 'i18n';
-import { data } from '/companion/data.js';
+import { data } from '../../companion/data.js';
 clock.granularity = 'seconds';
 
 //import { init as getStateItem } from '../state';
@@ -95,7 +95,7 @@ function draw() {
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    $activiteit.text = data[0].name;
+    $activiteit.text = data[1].name;
   };
 
   /*const list = getStateItem('listData');

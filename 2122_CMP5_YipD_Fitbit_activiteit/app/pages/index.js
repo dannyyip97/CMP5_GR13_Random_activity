@@ -72,25 +72,17 @@ function draw() {
     $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
 
-    $activiteit.text = data[1].name;
+    $activiteit.text = data[willekeurigGetal(0, 21)].name;
   }
 }
 
 //activiteiten
 
-/*function willekeurigGetal(min, max) {
+function willekeurigGetal(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-function answer() {
-  if ($activiteit.onclick) {
-    document.getElementById('activiteit').text =
-      $antwoorden[willekeurigGetal(0, 6)];
-  }
-}
-$activiteit.addEventListener('click', answer);*/
 
 function updateTime(datetime) {
   const minute = datetime.getMinutes();

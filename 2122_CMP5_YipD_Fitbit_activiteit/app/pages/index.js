@@ -6,6 +6,7 @@ import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
 import { gettext } from 'i18n';
 import { data } from '../../companion/data.js';
+
 clock.granularity = 'seconds';
 
 //import { init as getStateItem } from '../state';

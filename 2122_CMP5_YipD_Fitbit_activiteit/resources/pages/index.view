@@ -36,9 +36,9 @@ arc-width="5" start-angle="90" sweep-angle="360" />
       <set href="handle" attributeName="id" to="replace-button" />
   </use>
 
-  <textarea id="activiteit" fill="white" x="90" y="155" width="150" height="80" font-size="15" font-family="System-Regular" text-anchor="middle" text-buffer="_Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden zjnflkjsnlfdkjslkdgjkdsngknkjldgnkljndgjnkdfsgkdnkl"/>
+  <textarea id="activiteit" fill="white" x="90" y="155" width="150" height="80" font-size="15" font-family="System-Regular" text-anchor="middle" text-buffer="zjnflkjsnlfdkjslkdgjkdsngknkjldgnkljndgjnkdfsgkdnkl"/>
 
-  <text id="activiteit" fill="white" width="300" height="200" x="167" y="" font-size="12" font-family="System-Regular" text-anchor="middle" text-length="40"/>
+  <text fill="white" width="300" height="200" x="167" y="" font-size="12" font-family="System-Regular" text-anchor="middle" text-length="6"/>
 
   <text id="time" fill="white" x="79%" y="32%" font-size="25" font-family="System-Regular" text-anchor="middle" text-length="6"/>
 

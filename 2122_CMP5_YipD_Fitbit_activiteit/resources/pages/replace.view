@@ -4,4 +4,5 @@
   <use href="#button" fill="#FF00FF" x="10%" y="100%-90" width="80%">
     <set href="text" attributeName="text-buffer" to="_Terug" />
     <set href="handle" attributeName="id" to="back-button" />
+    </use>
 </svg>

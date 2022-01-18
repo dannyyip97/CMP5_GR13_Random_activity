@@ -10,3 +10,6 @@ msgstr "Activiteit"
 msgid "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."
 
 msgstr "Een leuke alternatief om verveling tegengaan. Het genereert leuke activiteiten afgestemd op uw weersomstandigheden. Zodat je altijd iets te doen hebt zowel alleen als met je vrienden."
+
+msgid "Tap on me                                                       "
+msgstr "Tap op mij                                                       "

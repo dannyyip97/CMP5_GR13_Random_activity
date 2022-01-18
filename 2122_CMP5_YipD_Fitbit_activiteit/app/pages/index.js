@@ -23,6 +23,7 @@ clock.granularity = 'seconds';
 //const $weather = document.getElementById('weather');
 let $buttonDetail = null;
 let $buttonReplace = null;
+let $acti = null;
 let time = '';
 let $time = null;
 let $weather = null;
@@ -37,6 +38,7 @@ export function destroy() {
   console.log('destroy index page');
   $buttonDetail = null;
   $buttonReplace = null;
+  $acti = null;
   $time = null;
   $weather = null;
   $activiteit = null;
@@ -46,6 +48,7 @@ export function init() {
   console.log('init index page');
   $buttonDetail = document.getElementById('detail-button');
   $buttonReplace = document.getElementById('replace-button');
+  $acti = document.getElementById('acti');
   $time = document.getElementById('time');
   $weather = document.getElementById('weather');
   $activiteit = document.getElementById('activiteit');
@@ -57,6 +60,10 @@ export function init() {
   };
   $buttonReplace.onclick = () => {
     switchPage('replace');
+  };
+
+  $acti.onclick = () => {
+    $activiteit.text = data[willekeurigGetal(0, 20)].name;
   };
 
   doSomething();
@@ -71,8 +78,6 @@ function draw() {
   if ($time && $weather && $activiteit) {
     $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
-
-    $activiteit.text = data[willekeurigGetal(0, 21)].name;
   }
 }
 
@@ -99,6 +104,7 @@ function updateTime(datetime) {
   time = `${hours}:${mins}`;
 
   // draw every second to show time changes
+
   draw();
 }
 

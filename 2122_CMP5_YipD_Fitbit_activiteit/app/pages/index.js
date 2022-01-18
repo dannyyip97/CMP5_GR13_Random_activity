@@ -5,7 +5,7 @@ import clock from 'clock';
 import { getStateItem } from '../state';
 import { preferences } from 'user-settings';
 import { gettext } from 'i18n';
-import { getListData } from '../commands';
+import { data } from '/companion/data.js';
 clock.granularity = 'seconds';
 
 //import { init as getStateItem } from '../state';
@@ -28,6 +28,10 @@ let $time = null;
 let $weather = null;
 let $activiteit = null;
 
+/*listData.forEach((function (arrayItem)) => {
+  var x = arrayItem.prop1 + 2;
+  console.log(x);
+});*/
 function doSomething() {
   console.log('hallo index');
   console.log(gettext('welcome'));
@@ -66,31 +70,66 @@ export function init() {
   // use the function on start as well
   updateTime(new Date());
 }
+/*var datatest = getStateItem('listData').map(function () {
+return this.attr("name");
+});
+var someactivity = '';*/
+
+/*function getListOfName(){
+  var listData = getStateItem('listData');
+  let names = [];
+  listData[1].map(listData => {
+    listData[1].map(({name}) => {if(name) names.push(name)})
+  })
+  return names;
+}
+console.log("Full list of names", getListOfName());*/
+
 
 function draw() {
   if ($time && $weather && $activiteit) {
     $weather.text = getStateItem('weatherTemp') + '°C';
     $time.text = time;
-    $activiteit.text = getStateItem('listData');
-    console.log($activiteit);
-  }
+    function willekeurigGetal(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    $activiteit.text = data[0].name;
+  };
+
+  /*const list = getStateItem('listData');
+
+  console.log(JSON.stringify(list));
+
+  myList.delegate = {
+    getTileInfo: (index) => {
+      return {
+        type: 'my-pool',
+        value: list[index],
+        index: index,
+      };
+    },
+    configureTile: (tile, info) => {
+      console.log(`Item: ${info.index}`);
+      if (info.type == 'my-pool') {
+        tile.getElementById('text').text = `${info.value.name}`;
+        let touch = tile.getElementById('touch');
+        touch.onclick = function () {
+          setStateItem('detailId', info.value.id);
+          switchPage('detail');
+        };
+      }
+    },
+  };
+
+  // length must be set AFTER delegate
+  myList.length = list.length;
+  $locationName.text = getStateItem('location');*/
 }
 
 //activiteiten
 
-/*function willekeurigGetal(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function answer() {
-  if ($activiteit.onclick) {
-    document.getElementById('activiteit').text =
-      $antwoorden[willekeurigGetal(0, 6)];
-  }
-}
-$activiteit.addEventListener('click', answer);*/
 
 function updateTime(datetime) {
   const minute = datetime.getMinutes();
@@ -107,7 +146,7 @@ function updateTime(datetime) {
   time = `${hours}:${mins}`;
 
   // draw every second to show time changes
-  getListData();
+
   draw();
 }
 

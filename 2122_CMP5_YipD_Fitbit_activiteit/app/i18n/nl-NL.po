@@ -1,5 +1,5 @@
 msgid "Over FitBored"
-msgstr "Over Fitbored"
+msgstr "Over FitBored"
 
 msgid "Terug"
 msgstr "Terug"
@@ -13,3 +13,66 @@ msgstr "Een leuke alternatief om verveling tegengaan. Het genereert leuke activi
 
 msgid "Tap on me                                                       "
 msgstr "Tap op mij                                                       "
+
+msgid "Plan a vacation you have always wanted to take"
+msgstr "Plan een vakantie die je altijd had willen doen"
+
+msgid "Hold a video game tournament with some friends"
+msgstr "Hou een videogame wedstrijd met wat vrienden"
+
+msgid "Teach your dog a new trick"
+msgstr "Leer uw hond een nieuw trucje"
+
+msgid "Take a spontaneous road trip with some friends"
+msgstr "Maak een spontane road trip met je vrienden"
+
+msgid "Have a picnic with some friends"
+msgstr "Ga picknicken met wat vrienden"
+
+msgid "Create your personal website"
+msgstr "Maak je eigen website"
+
+msgid "Repaint a room in your house"
+msgstr "Herschilder een kamer in je huis"
+
+msgid "Bake pastries for/with you and your partner"
+msgstr "Bak gebakjes voor/met jou en je partner"
+
+msgid "Take a hike at a local park"
+msgstr "Ga wandelen in een lokaal park"
+
+msgid "Go on a fishing trip with some friends"
+msgstr "Ga vissen met een paar vrienden"
+
+msgid "Go stargazing"
+msgstr "Kijk naar de sterrenhemel"
+
+msgid "Watch a movie you would never usually watch"
+msgstr "Kijk een film die je normaal niet zou zien"
+
+msgid "Start reading a book"
+msgstr "Start met het lezen van een boek"
+
+msgid "Pull a harmless prank on one of your friends"
+msgstr "Haal een onschuldige prank uit op een van je vrienden"
+
+msgid "Take an online cooking class"
+msgstr "Volg een online kookles"
+
+msgid "Play some card games"
+msgstr "Speel kaartspelletjes"
+
+msgid "Run 5km in your local park"
+msgstr "Loop 5km in een lokaal park"
+
+msgid "Draw one of your favorite disney characters"
+msgstr "teken één van je favoriete Disney personages"
+
+msgid "Learn something new on Youtube"
+msgstr "Leer iets nieuw op Youtube"
+
+msgid "Take nice pictures with some friends and post it"
+msgstr "Neem mooie foto's met vrienden en post ze"
+
+msgid "Make a sandcastle"
+msgstr "Maak een zandkasteel"
